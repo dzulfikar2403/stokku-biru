@@ -32,6 +32,7 @@ const LoginForm: React.FC = () => {
 			} else if (result?.ok) {
 				message.success("Login berhasil!");
 				router.push("/dashboard");
+				router.refresh();
 			}
 		} catch (error) {
 			message.error("Gagal login: Terjadi kesalahan pada server");
